@@ -101,6 +101,11 @@
     <Compile Include="Assets\Photon\Fusion\Scripts\Prototyping\ToggleRunnerProvideInput.cs" />
     <Compile Include="Assets\Photon\Fusion\Scripts\BurstDeltaCompressor.cs" />
     <Compile Include="Assets\Photon\Fusion\Scripts\Prototyping\NetworkDebugStart.cs" />
+    <Compile Include="Assets\Scripts\Lobby\LobbyPanelBase.cs" />
+    <Compile Include="Assets\Scripts\Lobby\CreateNicknamePanel.cs" />
+    <Compile Include="Assets\Scripts\Lobby\MiddleSectionPanel.cs" />
+    <Compile Include="Assets\Scripts\Lobby\LobbyUiManager.cs" />
+    <Compile Include="Assets\Scripts\Other\Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
