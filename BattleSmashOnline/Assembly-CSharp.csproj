@@ -106,6 +106,9 @@
     <Compile Include="Assets\Scripts\Lobby\MiddleSectionPanel.cs" />
     <Compile Include="Assets\Scripts\Lobby\LobbyUiManager.cs" />
     <Compile Include="Assets\Scripts\Other\Utilities.cs" />
+    <Compile Include="Assets\Scripts\Other\NetworkRunnerController.cs" />
+    <Compile Include="Assets\Scripts\Other\GlobalManagers.cs" />
+    <Compile Include="Assets\Scripts\Other\DTOL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
