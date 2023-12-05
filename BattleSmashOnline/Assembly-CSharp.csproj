@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\Other\NetworkRunnerController.cs" />
     <Compile Include="Assets\Scripts\Other\GlobalManagers.cs" />
     <Compile Include="Assets\Scripts\Other\DTOL.cs" />
+    <Compile Include="Assets\Scripts\Lobby\LoadingCanvasController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

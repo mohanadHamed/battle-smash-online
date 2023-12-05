@@ -35,6 +35,6 @@ public class LobbyPanelBase : MonoBehaviour
     {
         const string popOutClipName = "Out";
         
-        StartCoroutine(Utilities.PlayANimAndSetStateWhenFinished(gameObject, _panelAnimator, popOutClipName, false));
+        StartCoroutine(Utilities.PlayAnimAndSetStateWhenFinished(gameObject, _panelAnimator, popOutClipName, false));
     }
 }

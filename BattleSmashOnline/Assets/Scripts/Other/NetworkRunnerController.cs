@@ -4,15 +4,25 @@ using System.Collections.Generic;
 using Fusion;
 using Fusion.Sockets;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
 {
+    public event Action OnStartRunnerConnection;
+    public event Action OnPlayerJoinedSuccessfully;
+
     [SerializeField] private NetworkRunner _networkRunnerPrefab;
 
     private NetworkRunner _networkRunnerInstance;
 
+    public void ShutdownRunner()
+    {
+        _networkRunnerInstance.Shutdown();
+    }
     public async void StartGame(GameMode mode, string roomName)
     {
+        OnStartRunnerConnection?.Invoke();
+
         if (_networkRunnerInstance == null)
         {
             _networkRunnerInstance = Instantiate(_networkRunnerPrefab);
@@ -44,6 +54,7 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
         Debug.Log("OnPlayerJoined");
+        OnPlayerJoinedSuccessfully?.Invoke();
     }
 
     public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)
@@ -64,6 +75,9 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason)
     {
         Debug.Log("OnShutdown");
+
+        const string lobbyScene = "Lobby";
+        SceneManager.LoadScene(lobbyScene);
     }
 
     public void OnConnectedToServer(NetworkRunner runner)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Utilities
 {
-    public static IEnumerator PlayANimAndSetStateWhenFinished(GameObject parent, Animator animator, string clipName,
+    public static IEnumerator PlayAnimAndSetStateWhenFinished(GameObject parent, Animator animator, string clipName,
         bool activeStateAtTheEnd = true)
     {
         animator.Play(clipName);
